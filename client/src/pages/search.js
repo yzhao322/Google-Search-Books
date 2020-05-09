@@ -10,7 +10,6 @@ const search = () => {
 
   const [search, setSearch] = useState("");
   const [error, setError] = useState("");
-  const [message, setMessage] = useState("");
 
   const handleInputChange = event => {
     setSearch(event.target.value);
@@ -35,7 +34,6 @@ const search = () => {
                       image: result.volumeInfo.imageLinks.thumbnail,
                       link: result.volumeInfo.infoLink
                     }
-                    console.log(result);
                     return result;
                   });
                   setError("");
@@ -50,8 +48,9 @@ const handleSavedButton = event => {
     event.preventDefault();
     let savedBooks = books.filter(book => book.id === event.target.id)
   savedBooks = savedBooks[0];
-    API.saveBook(savedBooks)
-      .then(setMessage("book is saved"))
+  console.log(savedBooks);
+  API.saveBook(savedBooks)
+      .then(alert("Book is Saved!"))
       .catch(err => console.log(err))
   };
 

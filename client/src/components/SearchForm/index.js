@@ -3,7 +3,7 @@ import { Card, ListGroupItem, ListGroup, Button, InputGroup, FormControl} from "
 
 function SearchForm(props){
   return (
-<Card style={{ width: '100rem' }}>
+<Card style={{ width: '30rem' }}>
   <Card.Body>
     <Card.Title>Search Your Books</Card.Title>
   </Card.Body>

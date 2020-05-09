@@ -33,7 +33,7 @@ function SavedBook(props) {
                                         <small className="text-muted">{savedBook.author}</small>
                                     </Card.Footer>
                                 </Card>
-                                <button className="saveBook btn btn-primary" id={savedBook._id} onClick={(event) => props.handleDeleteButton(event)}>
+                                <button className="saveBook btn btn-primary" onClick={() => props.HandleDeleteButton(savedBook._id)}>
                                     Delete
                                 </button>
                                

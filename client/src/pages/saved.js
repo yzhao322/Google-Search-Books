@@ -8,14 +8,13 @@ const saved = () => {
 
   const HandleDeleteButton = id => {
     API.deleteBook(id)
-    .then(res => useEffect())
+    .then(window.location.reload())
     .catch(err => console.log(err))
   };
 
   useEffect(() => {
     API.getBooks()
       .then(res => {
-        console.log(res);
         savedBooksState(res.data)
       })
     .catch(err => console.log(err))
