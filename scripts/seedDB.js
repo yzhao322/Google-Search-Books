@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks")
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@ds145639.mlab.com:45639/heroku_6n0lwh5k")
 .then(() => console.log("Mongodb connected"))
 .catch(err => console.log(err));
 
